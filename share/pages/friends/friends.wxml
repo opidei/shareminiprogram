@@ -1,0 +1,29 @@
+<van-nav-bar
+ title="好友列表"
+ left-arrow
+ title-class='navtitle'
+ bind:click-left="onClickLeft"
+ bind:click-right="onClickRight"
+ custom-class="red"
+>
+	<van-icon
+	 name="search"
+	 slot="right"
+	/>
+</van-nav-bar>
+<van-index-bar>
+	<view>
+		<van-index-anchor index="A" />
+		<van-cell title="文本" />
+		<van-cell title="文本" />
+		<van-cell title="文本" />
+	</view>
+	<view>
+		<van-index-anchor index="B" />
+		<van-cell title="文本" />
+		<van-cell title="文本" />
+		<van-cell title="文本" />
+	</view>
+	...
+</van-index-bar>
+

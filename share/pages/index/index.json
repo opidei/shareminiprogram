@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "home":"/pages/component/home/home",
+    "find":"/pages/component/find/find",
+    "user":"/pages/component/user/user",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+  }
+}
