@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/friends/friends"
+    "pages/friends/friends",
+    "pages/mysource/mysource"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,6 +36,8 @@
     "van-sidebar": "@vant/weapp/sidebar/index",
     "van-sidebar-item": "@vant/weapp/sidebar-item/index",
     "van-index-bar": "@vant/weapp/index-bar/index",
-    "van-index-anchor": "@vant/weapp/index-anchor/index"
+    "van-index-anchor": "@vant/weapp/index-anchor/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index"
   }
 }

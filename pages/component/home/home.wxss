@@ -30,3 +30,7 @@
 .from {
   color: #646566;
 }
+
+.van-tab--active {
+  color: var(--tab-active-text-color,#e81e25) !important;
+}

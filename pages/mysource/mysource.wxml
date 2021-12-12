@@ -1,0 +1,36 @@
+<van-nav-bar
+ title="我的分享"
+ left-arrow
+ title-class="navtitle"
+ bind:click-left="onClickLeft"
+ bind:click-right="onClickRight"
+ custom-class="red"
+>
+	<van-icon name="search" slot="right" />
+</van-nav-bar>
+<view>
+	<van-card
+	 lazy-load="true"
+	 num="{{item.num}}"
+	 price="{{item.price}}"
+	 tag="{{item.tag==''?'未分类':item.tag}}"
+	 desc="{{item.desc}}"
+	 title="{{item.title}}"
+	 thumb="{{ item.imgurl }}"
+	 wx:for="{{ goods }}"
+	 wx:key="item"
+	 style="width:100%"
+	>
+		<view slot="origin-price">
+			<text class>积分抵扣：100</text>
+		</view>
+		<view slot="tags">
+			<van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
+			<van-tag type="warning">共享</van-tag>
+		</view>
+		<view slot="footer">
+			<text>{{item.status}}</text>
+		</view>
+	</van-card>
+</view>
+

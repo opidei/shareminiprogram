@@ -1,10 +1,6 @@
 <view class="header">
 	<view class="scan">
-		<van-icon
-		 name="scan"
-		 size="50rpx"
-		 color="white"
-		/>
+		<van-icon name="scan" size="50rpx" color="white" />
 		<view class="scan-text">活动扫码</view>
 	</view>
 	<view class="title">
@@ -23,50 +19,29 @@
 			/>
 		</van-col>
 		<van-col span="8">
-			<text class="" style="display:block;padding:1px 0;width:100%;color:white;font-size:40rpx">
-        一只大猫
-      </text>
-			<text class="" style="color:#efefef;font-size:30rpx">我的积分：190</text>
+			<text class style="display:block;padding:1px 0;width:100%;color:white;font-size:40rpx">一只大猫</text>
+			<text class style="color:#efefef;font-size:30rpx">我的积分：190</text>
 		</van-col>
 		<van-col span="8" />
 	</van-row>
 </view>
 <view class="cells">
 	<van-cell-group inset>
-		<van-cell
-		 title="积分记录"
-		 icon="shop-o"
-		 is-link
-		/>
-		<van-cell
-		 title="积分商城"
-		 icon="points"
-		 is-link
-		/>
-		<van-cell
-		 title="我的购买"
-		 icon="records"
-		 is-link
-		/>
+		<van-cell title="积分记录" icon="shop-o" is-link />
+		<van-cell title="积分商城" icon="points" is-link />
+		<van-cell title="我的购买" icon="records" is-link />
 		<van-cell
 		 title="我的分享"
 		 icon="share-o"
+		 bindtap="mysource"
 		 is-link
 		/>
 	</van-cell-group>
 </view>
 <view class="bottom">
 	<van-cell-group inset>
-		<van-cell
-		 title="意见建议"
-		 icon="shop-o"
-		 is-link
-		/>
-		<van-cell
-		 title="官方反馈"
-		 icon="points"
-		 is-link
-		/>
+		<van-cell title="意见建议" icon="shop-o" is-link />
+		<van-cell title="官方反馈" icon="points" is-link />
 	</van-cell-group>
 </view>
 
