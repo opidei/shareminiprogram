@@ -1,0 +1,45 @@
+<view class="bg-grey">
+	<van-nav-bar
+	 class="fix"
+	 title="发布分享"
+	 left-arrow
+	 title-class="navtitle"
+	 bind:click-left="onClickLeft"
+	 custom-class="red"
+	/>
+	<view class="hideheader" />
+	<van-cell-group>
+		<van-field
+		 model:value="{{ name }}"
+		 required
+		 clearable
+		 label="物品名"
+		 icon="question-o"
+		 placeholder="请输入物品名"
+		/>
+		<van-field
+		 model:value="{{ description }}"
+		 required
+		 clearable
+		 type="textarea"
+		 label="物品描述"
+		 placeholder="请输入物品描述"
+		 autosize
+		/>
+		<van-cell title="物品积分" required>
+			<van-stepper value="{{ 1 }}" integer />
+		</van-cell>
+		<van-cell title="图片上传" label="最多上传5张" required />
+		<van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" max-count="5" />
+		<van-cell title="发布范围" value="全部可见" bind:tap="selectRange" />
+		<van-popup
+		 show="{{ picker }}"
+		 position="bottom"
+		 custom-style="height: 40%;"
+		 bind:close="onClose"
+		>
+			<van-picker class="picker" columns="{{ columns }}" bind:change="onChange" />
+		</van-popup>
+	</van-cell-group>
+</view>
+

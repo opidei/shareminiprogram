@@ -18,9 +18,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    friends(){
+    friends() {
       wx.navigateTo({
         url: '/pages/friends/friends'
+      })
+    },
+    publish() {
+      wx.navigateTo({
+        url: '/pages/publish/publish'
       })
     }
   }

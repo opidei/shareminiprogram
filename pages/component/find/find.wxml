@@ -222,7 +222,7 @@
 		</view>
 	</view>
 </view>
-<view class="publish">
+<view class="publish" bindtap="publish">
 	<van-button
 	 round
 	 color="#e81e25"

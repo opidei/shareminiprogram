@@ -91,5 +91,10 @@ Component({
         activeNames: event.detail,
       });
     },
+    detail() {
+      wx.navigateTo({
+        url: '/pages/items/detail'
+      })
+    }
   }
 })

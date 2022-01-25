@@ -1,0 +1,73 @@
+<view class="bg-grey">
+	<van-nav-bar
+	 class="fix"
+	 title="物品详情"
+	 left-arrow
+	 title-class="navtitle"
+	 bind:click-left="onClickLeft"
+	 custom-class="red"
+	/>
+	<view class="hideheader" />
+	<view class="header">
+		<swiper
+		 class="swiper"
+		 indicator-dots="true"
+		 indicator-color="rgba(232,30,37,.7)"
+		 indicator-active-color="rgba(100,100,100,.5)"
+		 autoplay="false"
+		 current="0"
+		 interval="3000"
+		 duration="2000"
+		 circular="true"
+		>
+			<block wx:for="{{img_urls}}" wx:key="*this">
+				<swiper-item>
+					<view class="swiper-item">
+						<image src="{{item}}" mode="scaleToFill" lazy-load="true" />
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="maininfo">
+			<view class="price">
+				330
+				<span class="subfont">积分</span>
+			</view>
+			<view class="seller">
+				<span class="subfont">来自：</span>
+				张三
+			</view>
+		</view>
+	</view>
+	<view class="title bg-white">
+		<view class="main-text">我分享的一个大大的好东西啊</view>
+		<van-row>
+			<van-col class="actions" span="8">
+				<van-icon name="star-o" />
+				收藏
+			</van-col>
+			<van-col class="actions" span="8">
+				<van-icon name="friends-o" />
+				加好友
+			</van-col>
+			<van-col class="actions" span="8">
+				<van-icon name="share-o" />
+				分享
+			</van-col>
+		</van-row>
+	</view>
+	<view class="allinfo">
+		物品详细信息
+		<van-cell-group>
+			<van-cell title="类别" value="食物" />
+			<van-cell title="成色" value="九成新" border="{{ false }}" />
+		</van-cell-group>
+	</view>
+	<view class="hidebottom" />
+	<van-goods-action>
+		<van-goods-action-icon icon="chat-o" text="沟通" bind:click="onClickIcon" />
+		<van-goods-action-icon icon="star-o" text="收藏" bind:click="onClickIcon" />
+		<van-goods-action-button text="立即购买" bind:click="onClickButton" />
+	</van-goods-action>
+</view>
+

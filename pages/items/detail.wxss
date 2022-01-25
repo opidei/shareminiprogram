@@ -1,0 +1,76 @@
+.bg-grey{
+  background-color: #eee;
+}
+.bg-white{
+  background-color: #fff;
+}
+.hideheader{
+  width: 100%;
+  height: 66px;
+}
+.header{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-bottom:50rpx;
+}
+.fix{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper-item{
+  height: 600rpx;
+  width: 100%;
+  top:0;
+  left: 0;
+}
+.swiper{
+  height: 600rpx;
+}
+.maininfo{
+  display: flex;
+  background-color: #e81e25;
+  color: #fff;
+  height: 100rpx;
+}
+.price{
+  flex:1 1;
+  text-align: left;
+  line-height: 100rpx;
+  padding-left: 50rpx;
+}
+.seller{
+  flex:1 1;
+  text-align: right;
+  line-height: 100rpx;
+  padding-right: 50rpx;
+}
+.subfont{
+  font-size: 10px;
+}
+.title{
+  border-radius: 5px;
+  padding: 20rpx;
+  min-height: 100rpx;
+}
+.main-text{
+  font-family: '黑体';
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.actions{
+  font-size: 8px;
+  text-align: center;
+}
+.allinfo{
+  margin-top: 50rpx;
+  color:#999;
+  font-size: 12px;
+}
+.hidebottom{
+  width: 100%;
+  height: 50px;
+}
