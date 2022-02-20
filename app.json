@@ -48,6 +48,7 @@
         "van-datetime-picker": "@vant/weapp/datetime-picker/index",
         "van-stepper": "@vant/weapp/stepper/index",
         "van-uploader": "@vant/weapp/uploader/index",
-        "van-picker": "@vant/weapp/picker/index"
+        "van-picker": "@vant/weapp/picker/index",
+        "van-submit-bar": "@vant/weapp/submit-bar/index"
     }
 }

@@ -2,7 +2,8 @@
 <view class="container">
 	<home wx:if="{{active==0}}" />
 	<find wx:if="{{active==1}}" />
-	<user wx:if="{{active==2}}" />
+	<friends wx:if="{{active==2}}" />
+	<user wx:if="{{active==3}}" />
 	<van-tabbar
 	 active="{{ active }}"
 	 active-color="#e81e25"
@@ -11,6 +12,7 @@
 	>
 		<van-tabbar-item icon="shop">推荐</van-tabbar-item>
 		<van-tabbar-item icon="refund-o">分享</van-tabbar-item>
+		<van-tabbar-item icon="friends-o">好友</van-tabbar-item>
 		<van-tabbar-item icon="manager">我的</van-tabbar-item>
 	</van-tabbar>
 </view>

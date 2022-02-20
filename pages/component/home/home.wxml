@@ -1,152 +1,200 @@
 <!-- pages/index/home.wxml -->
 <view class="container" hover-class="none" hover-stop-propagation="false">
-  <view class="header">分享小程序</view>
-  <van-search
-    value="{{ value }}"
-    input-align="left"
-    background="#e81e25"
-    shape="round"
-    placeholder="请输入搜索关键词"
-    style="width:100%;margin-top:160rpx;"
-  />
-  <van-grid column-num="3" border="{{false}}" style="width:100%">
-    <van-grid-item
-      icon="{{item.icon}}"
-      text="{{item.text}}"
-      url="{{item.url}}"
-      wx:key="item"
-      wx:for="{{ category }}"
-    />
-  </van-grid>
-  <van-notice-bar left-icon="volume-o" mode="closeable" text="这里是公告，一条好的系统公告" style="width:100%" />
-  <view style="width:100%;margin-bottom:100rpx;min-height:60vh;height:100%">
-    <van-tabs animated swipeable type="card" style="width:100%;min-height:80vh;background:#fff">
-      <van-tab title="好友">
-        <van-collapse
-          accordion
-          value="{{ activeNames }}"
-          bind:change="onChange"
-          style="margin-bottom:40rpx"
-        >
-          <van-collapse-item title="张三（20）" name="1">
-            <van-card
-              lazy-load="true"
-              num="{{item.num}}"
-              price="{{item.price}}"
-              tag="{{item.tag==''?'未分类':item.tag}}"
-              desc="{{item.desc}}"
-              title="{{item.title}}"
-              thumb="{{ item.imgurl }}"
-              wx:for="{{ goods }}"
-              wx:key="item"
-              style="width:100%"
-              bindtap="detail"
-            >
-              <view slot="origin-price">
-                <text class>积分抵扣：100</text>
-              </view>
-              <view slot="tags">
-                <van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
-                <van-tag type="warning">共享</van-tag>
-              </view>
-              <view slot="footer">
-                <text>{{item.status}}</text>
-              </view>
-            </van-card>
-          </van-collapse-item>
-          <van-collapse-item title="李四（0）" name="2" />
-          <van-collapse-item title="王五（2）" name="3">
-            <van-card
-              lazy-load="true"
-              num="{{item.num}}"
-              price="{{item.price}}"
-              tag="{{item.tag==''?'未分类':item.tag}}"
-              desc="{{item.desc}}"
-              title="{{item.title}}"
-              thumb="{{ item.imgurl }}"
-              wx:for="{{ goods }}"
-              wx:key="item"
-              style="width:100%"
-            >
-              <view slot="origin-price">
-                <text class>积分抵扣：100</text>
-              </view>
-              <view slot="tags">
-                <van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
-                <van-tag type="warning">共享</van-tag>
-              </view>
-              <view slot="footer">
-                <text>{{item.status}}</text>
-              </view>
-            </van-card>
-          </van-collapse-item>
-          <van-collapse-item title="朱六（0）" name="4" />
-          <van-collapse-item title="老六（0）" name="5" />
-          <van-collapse-item title="陈六（7）" name="6">
-            <van-card
-              lazy-load="true"
-              num="{{item.num}}"
-              price="{{item.price}}"
-              tag="{{item.tag==''?'未分类':item.tag}}"
-              desc="{{item.desc}}"
-              title="{{item.title}}"
-              thumb="{{ item.imgurl }}"
-              wx:for="{{ goods }}"
-              wx:key="item"
-              style="width:100%"
-            >
-              <view slot="origin-price">
-                <text class>积分抵扣：100</text>
-              </view>
-              <view slot="tags">
-                <van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
-                <van-tag type="warning">共享</van-tag>
-              </view>
-              <view slot="footer">
-                <text>{{item.status}}</text>
-              </view>
-            </van-card>
-          </van-collapse-item>
-          <van-collapse-item title="啊六（0）" name="7" />
-          <van-collapse-item title="啊六（0）" name="8" />
-          <van-collapse-item title="啊六（0）" name="9" />
-          <van-collapse-item title disabled name="10" />
-        </van-collapse>
-      </van-tab>
-      <van-tab title="资源">
-        <van-tabs style="width:100%">
-          <van-tab title="全部" />
-          <van-tab title="二手" />
-          <van-tab title="共享" />
-          <van-tab title="服务" />
-          <van-tab title="资源" />
-          <van-tab title="活动" />
-          <van-tab title="其他" />
-        </van-tabs>
-        <van-card
-          lazy-load="true"
-          num="{{item.num}}"
-          price="{{item.price}}"
-          tag="{{item.tag==''?'未分类':item.tag}}"
-          desc="{{item.desc}}"
-          title="{{item.title}}"
-          thumb="{{ item.imgurl }}"
-          wx:for="{{ goods }}"
-          wx:key="item"
-          style="width:100%"
-        >
-          <view slot="origin-price">
-            <text class>积分抵扣：100</text>
-          </view>
-          <view slot="tags">
-            <van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
-            <van-tag type="warning">共享</van-tag>
-          </view>
-          <view slot="footer">
-            <text>{{item.status}}</text>
-          </view>
-        </van-card>
-      </van-tab>
-    </van-tabs>
-  </view>
+	<view class="header">分享小程序</view>
+	<van-search
+	 value="{{ value }}"
+	 input-align="left"
+	 background="#e81e25"
+	 shape="round"
+	 placeholder="请输入搜索关键词"
+	 style="width:100%;margin-top:160rpx;"
+	/>
+	<van-grid column-num="3" border="{{false}}" style="width:100%">
+		<van-grid-item
+		 icon="{{item.icon}}"
+		 text="{{item.text}}"
+		 url="{{item.url}}"
+		 wx:key="item"
+		 wx:for="{{ category }}"
+		/>
+	</van-grid>
+	<van-notice-bar
+	 left-icon="volume-o"
+	 mode="closeable"
+	 text="这里是公告，一条好的系统公告"
+	 style="width:100%"
+	/>
+	<view style="width:100%;margin-bottom:100rpx;min-height:60vh;height:100%">
+		<van-tabs
+		 animated
+		 swipeable
+		 type="card"
+		 style="width:100%;min-height:80vh;background:#fff"
+		>
+			<van-tab title="好友">
+				<van-collapse
+				 accordion
+				 value="{{ activeNames }}"
+				 bind:change="onChange"
+				 style="margin-bottom:40rpx"
+				>
+					<van-collapse-item title="张三（20）" name="1">
+						<view wx:for="{{ goods }}" wx:key="item">
+							<van-card
+							 lazy-load="true"
+							 num="{{item.num}}"
+							 price="{{item.price}}"
+							 tag="{{item.tag==''?'未分类':item.tag}}"
+							 desc="{{item.desc}}"
+							 title="{{item.title}}"
+							 thumb="{{ item.imgurl }}"
+							 currency="积分值："
+							 style="width:100%"
+							 bindtap="detail"
+							 wx:if="{{item.status!='出售给李四'}}"
+							>
+								<view slot="origin-price">
+									<text class>积分抵扣：100</text>
+								</view>
+								<view slot="tags">
+									<van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
+									<van-tag type="warning">共享</van-tag>
+								</view>
+								<view slot="footer">
+									<text style="margin-right:10rpx;">{{item.status}}</text>
+									<van-button style="margin-right:10rpx;" size="mini">收藏</van-button>
+									<van-button size="mini">分享</van-button>
+								</view>
+							</van-card>
+						</view>
+					</van-collapse-item>
+					<van-collapse-item title="李四（0）" name="2" />
+					<van-collapse-item title="王五（2）" name="3">
+						<van-card
+						 lazy-load="true"
+						 num="{{item.num}}"
+						 price="{{item.price}}"
+						 tag="{{item.tag==''?'未分类':item.tag}}"
+						 desc="{{item.desc}}"
+						 title="{{item.title}}"
+						 thumb="{{ item.imgurl }}"
+						 currency="积分值："
+						 wx:for="{{ goods }}"
+						 wx:key="item"
+						 style="width:100%"
+						>
+							<view slot="origin-price">
+								<text class>积分抵扣：100</text>
+							</view>
+							<view slot="tags">
+								<van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
+								<van-tag type="warning">共享</van-tag>
+							</view>
+							<view slot="footer">
+								<text>{{item.status}}</text>
+							</view>
+						</van-card>
+					</van-collapse-item>
+					<van-collapse-item title="朱六（0）" name="4" />
+					<van-collapse-item title="老六（0）" name="5" />
+					<van-collapse-item title="陈六（7）" name="6">
+						<van-card
+						 lazy-load="true"
+						 num="{{item.num}}"
+						 price="{{item.price}}"
+						 tag="{{item.tag==''?'未分类':item.tag}}"
+						 desc="{{item.desc}}"
+						 title="{{item.title}}"
+						 thumb="{{ item.imgurl }}"
+						 currency="积分值："
+						 wx:for="{{ goods }}"
+						 wx:key="item"
+						 style="width:100%"
+						>
+							<view slot="origin-price">
+								<text class>积分抵扣：100</text>
+							</view>
+							<view slot="tags">
+								<van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
+								<van-tag type="warning">共享</van-tag>
+							</view>
+							<view slot="footer">
+								<text>{{item.status}}</text>
+							</view>
+						</van-card>
+					</van-collapse-item>
+					<van-collapse-item title="啊六（0）" name="7" />
+					<van-collapse-item title="啊六（0）" name="8" />
+					<van-collapse-item title="啊六（0）" name="9" />
+					<van-collapse-item title disabled name="10" />
+				</van-collapse>
+			</van-tab>
+			<van-tab title="资源">
+				<van-tabs style="width:100%">
+					<van-tab title="全部" />
+					<van-tab title="二手" />
+					<van-tab title="共享" />
+					<van-tab title="服务" />
+					<van-tab title="资源" />
+					<van-tab title="活动" />
+					<van-tab title="其他" />
+				</van-tabs>
+				<view class="filter">
+					<view class="filter-title">全部</view>
+					<view class="filter-button" bind:tap="showPopup">
+						<van-icon name="bars" />
+						筛选
+					</view>
+				</view>
+				<van-card
+				 lazy-load="true"
+				 num="{{item.num}}"
+				 price="{{item.price}}"
+				 tag="{{item.tag==''?'未分类':item.tag}}"
+				 desc="{{item.desc}}"
+				 title="{{item.title}}"
+				 thumb="{{ item.imgurl }}"
+				 currency="积分值："
+				 wx:for="{{ goods }}"
+				 wx:key="item"
+				 style="width:100%"
+				>
+					<view slot="origin-price">
+						<text class>积分抵扣：100</text>
+					</view>
+					<view slot="tags">
+						<van-tag type="danger" style="margin:0 20rpx">出售</van-tag>
+						<van-tag type="warning">共享</van-tag>
+					</view>
+					<view slot="footer">
+						<text>{{item.status}}</text>
+					</view>
+				</van-card>
+			</van-tab>
+		</van-tabs>
+	</view>
+	<van-popup
+	 show="{{ show }}"
+	 position="right"
+	 bind:close="onClose"
+	 style="margin-top:10vh"
+	 round
+	>
+		<view class="pop">
+			<view class="pop-title">类别</view>
+			<van-grid column-num="3" border="{{false}}">
+				<van-grid-item use-slot wx:for="{{ 6 }}" wx:key="key">
+					<van-button round size="mini">电子产品</van-button>
+				</van-grid-item>
+			</van-grid>
+			<view class="pop-title">积分区间</view>
+			<view class="pop-price">
+				<input class="pop-input" placeholder="最低价" />
+				-
+				<input class="pop-input" placeholder="最高价" />
+			</view>
+			<van-submit-bar button-text="确定" bind:submit="onSubmit" />
+		</view>
+	</van-popup>
 </view>
+

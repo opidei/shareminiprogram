@@ -79,7 +79,8 @@ Component({
       from: '陈八',
       num: 1,
       status: '未分享'
-    }]
+    }],
+    show: false
   },
 
   /**
@@ -95,6 +96,15 @@ Component({
       wx.navigateTo({
         url: '/pages/items/detail'
       })
-    }
+    },
+    showPopup() {
+      console.log(this.data.show)
+      this.setData({ show: true });
+    },
+
+    onClose() {
+      console.log(this.data.show)
+      this.setData({ show: false });
+    },
   }
 })

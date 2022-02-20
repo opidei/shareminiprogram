@@ -1,57 +1,18 @@
 <view class="container">
-	<view
-	 class="myfriend"
-	 bindtap="friends"
-	>
-		我的
-		<br/>
-		好友
-	</view>
-	<van-popup
-	 show="{{ show }}"
-	 bind:close="onClose"
-	>内容
-	</van-popup>
+	<van-popup show="{{ show }}" bind:close="onClose">内容</van-popup>
 	<view class="header">
 		<text class="title">分享你的分享</text>
 	</view>
-	<view class="">
-		<van-grid
-		 column-num="4"
-		 border="{{false}}"
-		>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
-			<van-grid-item
-			 icon="photo-o"
-			 text="文字"
-			/>
+	<view class>
+		<van-grid column-num="4" border="{{false}}">
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
+			<van-grid-item icon="photo-o" text="文字" />
 		</van-grid>
 	</view>
 	<view class="comments">
@@ -70,44 +31,23 @@
 						 src="https://img.yzcdn.cn/vant/cat.jpeg"
 						/>
 					</view>
-					<view
-					 class="action"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>分享了XXX
-					</view>
-					<view
-					 class="benefit"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>
+					<view class="action" hover-class="none" hover-stop-propagation="false">分享了XXX</view>
+					<view class="benefit" hover-class="none" hover-stop-propagation="false">
 						赚了
 						<text style="color:#e81e25">¥1000</text>
 					</view>
 				</view>
 				<view class="content">
-					<view class="van-multi-ellipsis--l2 text">
-						这是一个评价，评价就是这个。这是一个评价，评价就是这个。这是一个评价，评价就是这个。
-					</view>
-					<view
-					 class="image"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>
-						<van-grid
-						 column-num="3"
-						 border="{{ false }}"
-						>
+					<view class="van-multi-ellipsis--l2 text">这是一个评价，评价就是这个。这是一个评价，评价就是这个。这是一个评价，评价就是这个。</view>
+					<view class="image" hover-class="none" hover-stop-propagation="false">
+						<van-grid column-num="3" border="{{ false }}">
 							<van-grid-item
 							 use-slot
 							 wx:for="{{ 3 }}"
 							 wx:key="index"
 							 wx:for-item="index"
 							>
-								<image
-								 style="width: 100%; height: 90px;"
-								 src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
-								/>
+								<image style="width: 100%; height: 90px;" src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg" />
 							</van-grid-item>
 						</van-grid>
 					</view>
@@ -123,44 +63,23 @@
 						 src="https://img.yzcdn.cn/vant/cat.jpeg"
 						/>
 					</view>
-					<view
-					 class="action"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>分享了XXX
-					</view>
-					<view
-					 class="benefit"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>
+					<view class="action" hover-class="none" hover-stop-propagation="false">分享了XXX</view>
+					<view class="benefit" hover-class="none" hover-stop-propagation="false">
 						赚了
 						<text style="color:#e81e25">¥1000</text>
 					</view>
 				</view>
 				<view class="content">
-					<view class="van-multi-ellipsis--l2 text">
-						这是一个评价，评价就是这个。这是一个评价，评价就是这个。这是一个评价，评价就是这个。
-					</view>
-					<view
-					 class="image"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>
-						<van-grid
-						 column-num="3"
-						 border="{{ false }}"
-						>
+					<view class="van-multi-ellipsis--l2 text">这是一个评价，评价就是这个。这是一个评价，评价就是这个。这是一个评价，评价就是这个。</view>
+					<view class="image" hover-class="none" hover-stop-propagation="false">
+						<van-grid column-num="3" border="{{ false }}">
 							<van-grid-item
 							 use-slot
 							 wx:for="{{ 3 }}"
 							 wx:key="index"
 							 wx:for-item="index"
 							>
-								<image
-								 style="width: 100%; height: 90px;"
-								 src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
-								/>
+								<image style="width: 100%; height: 90px;" src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg" />
 							</van-grid-item>
 						</van-grid>
 					</view>
@@ -176,44 +95,23 @@
 						 src="https://img.yzcdn.cn/vant/cat.jpeg"
 						/>
 					</view>
-					<view
-					 class="action"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>分享了XXX
-					</view>
-					<view
-					 class="benefit"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>
+					<view class="action" hover-class="none" hover-stop-propagation="false">分享了XXX</view>
+					<view class="benefit" hover-class="none" hover-stop-propagation="false">
 						赚了
 						<text style="color:#e81e25">¥1000</text>
 					</view>
 				</view>
 				<view class="content">
-					<view class="van-multi-ellipsis--l2 text">
-						这是一个评价，评价就是这个。这是一个评价，评价就是这个。这是一个评价，评价就是这个。
-					</view>
-					<view
-					 class="image"
-					 hover-class="none"
-					 hover-stop-propagation="false"
-					>
-						<van-grid
-						 column-num="3"
-						 border="{{ false }}"
-						>
+					<view class="van-multi-ellipsis--l2 text">这是一个评价，评价就是这个。这是一个评价，评价就是这个。这是一个评价，评价就是这个。</view>
+					<view class="image" hover-class="none" hover-stop-propagation="false">
+						<van-grid column-num="3" border="{{ false }}">
 							<van-grid-item
 							 use-slot
 							 wx:for="{{ 3 }}"
 							 wx:key="index"
 							 wx:for-item="index"
 							>
-								<image
-								 style="width: 100%; height: 90px;"
-								 src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"
-								/>
+								<image style="width: 100%; height: 90px;" src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg" />
 							</van-grid-item>
 						</van-grid>
 					</view>
